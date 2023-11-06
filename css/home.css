@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(254, 245, 67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.saludo {
+  font-size: 150px;
+  font-weight: 300px;
+  text-transform: uppercase;
+  color: #800080; /* Color morado */
+  animation: neonPulse 1s ease-in-out infinite; /* Animación de texto con efecto de neón palpitante */
+  text-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 15px #800080; /* Efecto de neón */
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 15px #800080;
+  }
+  50% {
+    text-shadow: 0 0 10px #800080, 0 0 15px #800080, 0 0 20px #800080; /* Aumenta el resplandor en el punto medio de la animación */
+  }
+}
