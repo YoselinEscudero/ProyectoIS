@@ -1,0 +1,313 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #161815;
+}
+
+.section-padding {
+  padding: 30px 0;
+}
+
+.carousel-item {
+  height: 80vh;
+  min-height: 300px;
+}
+
+.carousel-caption {
+  bottom: 100px;
+  z-index: 2;
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.carousel-inner::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 30, 82, 0.327);
+  z-index: 1;
+}
+
+.navbar-nav a{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar-dark .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: #000;
+}
+
+.w-100 {
+  height: 100vh;
+}
+
+.navbar-toggler{
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.services .card-body i {
+  font-size: 50px;
+}
+
+.team .card-body i {
+  font-size: 20px;
+}
+
+@media(max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .carousel-item {
+    height: 70vh;
+  }
+  .w-100 {
+    height: 70vh;
+  }
+  .carousel-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  .about-text {
+    padding-top: 50px;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+  .section-padding {
+    padding: 50px 0;
+  }
+}
+
+ /* ---------------- Pagina Eventos ----------------- */
+
+.eventspage {
+  padding-top: 70px;
+  font-size: 25px;
+  /* color: white; */
+
+  width: 100%;
+  height: 100vh;
+  background-image: url('img/bg.jpg'); 
+  background-size: cover;
+}
+
+.leftbox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.leftbox .content {
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+  padding: 40px;
+  transition: .5s;
+}
+
+.leftbox .content:hover{
+  background: #0275d8; /* Color primario bootstrap */
+}
+
+.leftbox .content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.leftbox .content p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.events {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  float: right;
+  box-sizing: border-box;
+}
+
+.events ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.events ul li{
+  list-style: none;
+  background: #fff;
+  box-sizing: border-box;
+  height: 200px;
+  margin: 15px 0;
+}
+
+.events ul li .time{
+  position: relative;
+  padding: 20px;
+  background: #262626;
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  transition: .5s;
+}
+
+.events ul li:hover .time {
+  background: #0275d8;
+}
+
+.events ul li .time h2 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 60px;
+  line-height: 30px;
+}
+
+.events ul li .time h2 span {
+  font-size: 30px;
+}
+
+.events ul li .details {
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.events ul li .details h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+.events ul li .details p {
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.events ul li .details a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #262626;
+  margin-top: 15px;
+  font-size: 18px;
+  transition: .5s;
+  /* float: right; */
+}
+
+.events ul li .details a:hover {
+  background: #0275d8;
+  color: #fff;
+  border-color: #0275d8;
+}
+
+@media(max-width: 991px){
+  section{
+    height: 100%;
+    background-position: center;
+  }
+  section .leftbox {
+  width: 100%;
+  height: auto;
+  float: none;
+  padding: 20px;
+  }
+  section .events {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    float: none;
+  }
+  section .leftbox .content{
+    padding: 20px;
+  }
+  section .leftbox .content h1 {
+    font-size: 30px;
+  }
+  section .events ul {
+    position: relative;
+    transform: translateY(0px);
+    padding: 0 20px 20px;
+  }
+  section .events ul li {
+    height: auto;
+    background: rgba(255, 255, 255, .9);
+  }
+  section .events ul li .time {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+  }
+  section .events ul li .time h2 {
+    font-size: 30px;
+    line-height: 24px;
+  }
+  section .events ul li .time h2 span {
+    font-size: 15px;
+  }
+  section .events ul li .details {
+    width: 100%;
+    float: none;
+    padding-left: 100px;
+    background: transparent;
+  }
+  section .events ul li .details a {
+    padding: 5px 10px;
+  }
+}
