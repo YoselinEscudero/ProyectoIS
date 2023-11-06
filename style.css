@@ -256,3 +256,58 @@ body {
   color: #fff;
   border-color: #0275d8;
 }
+
+@media(max-width: 991px){
+  section{
+    height: 100%;
+    background-position: center;
+  }
+  section .leftbox {
+  width: 100%;
+  height: auto;
+  float: none;
+  padding: 20px;
+  }
+  section .events {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    float: none;
+  }
+  section .leftbox .content{
+    padding: 20px;
+  }
+  section .leftbox .content h1 {
+    font-size: 30px;
+  }
+  section .events ul {
+    position: relative;
+    transform: translateY(0px);
+    padding: 0 20px 20px;
+  }
+  section .events ul li {
+    height: auto;
+    background: rgba(255, 255, 255, .9);
+  }
+  section .events ul li .time {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+  }
+  section .events ul li .time h2 {
+    font-size: 30px;
+    line-height: 24px;
+  }
+  section .events ul li .time h2 span {
+    font-size: 15px;
+  }
+  section .events ul li .details {
+    width: 100%;
+    float: none;
+    padding-left: 100px;
+    background: transparent;
+  }
+  section .events ul li .details a {
+    padding: 5px 10px;
+  }
+}
