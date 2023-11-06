@@ -309,5 +309,11 @@ body {
   }
   section .events ul li .details a {
     padding: 5px 10px;
+
   }
 }
+
+.info {
+  height: 19px;
+}
+
