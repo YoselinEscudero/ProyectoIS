@@ -1,11 +1,399 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto IS</title>
-</head>
-<body>
-  <h1>Hola ssss🥵</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <div class="container">
+
+      <a href="#" class="navbar-brand"><span class="text-primary">Nombre </span>Pagina</a> <!-- Nombre pag -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+        aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarS">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Vendedores</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="eventos.html" class="nav-link">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Login</a> <!--Cambiar o eliminar/agregar más -->
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+
+  <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-current="true"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-current="true"
+        aria-label="Slide 3"></button>
+      <!-- Agregar más botones si quieren más imagenes en el carrusel -->
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="img/home-1.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption">
+          <h5>Foto de prueba</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta porro animi sed? Veritatis, veniam at.
+            Assumenda asperiores ipsam nisi in culpa vero odio consectetur doloremque tempora, quae hic ex?
+          </p>
+          <a href="#" class="btn btn-primary mt-3">More info</a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/home-2.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption">
+          <h5>Foto de prueba</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta porro animi sed? Veritatis, veniam at.
+            Assumenda asperiores ipsam nisi in culpa vero odio consectetur doloremque tempora, quae hic ex?
+          </p>
+          <a href="#" class="btn btn-primary mt-3">More info</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/home-3.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption">
+          <h5>Foto de prueba</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta porro animi sed? Veritatis, veniam at.
+            Assumenda asperiores ipsam nisi in culpa vero odio consectetur doloremque tempora, quae hic ex?
+          </p>
+          <a href="#" class="btn btn-primary mt-3">More info</a>
+        </div>
+      </div>
+      <!-- Agregar otro div si se agregaron más imgs al carrusel-->
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <section class="about section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="img/about.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <div class="about-text text-white">
+            <h2>Servicios que ofrecemos</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos corporis quia eligendi, id, saepe
+              quasi quibusdam odit laboriosam nesciunt similique labore in possimus minima, minus repellat. Delectus
+              eius beatae illum.
+            </p>
+            <a href="#" class="btn btn-primary">More info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="services section-padding">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center text-white pb5">
+            <h2>Nuestros Servicios</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi illo consequatur perspiciatis aliquid
+              corporis autem repellat, <br>delectus pariatur quo vero porro voluptatem libero eos ipsum at fugit rerum
+              temporibus ipsa!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-shop"></i> <!--Cambiar icono busca bi bi icons (bootstrap icons)-->
+              <h3 class="card-title">Productos</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit maxime cupiditate optio
+                necessitatibus dolorem, corporis perspiciatis, velit dolores placeat delectus? Soluta vel corporis
+                ducimus error quisquam excepturi reprehenderit quasi.
+              </p>
+              <button class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-calendar"></i>
+              <h3 class="card-title">Eventos</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit maxime cupiditate optio
+                necessitatibus dolorem, corporis perspiciatis, velit dolores placeat delectus? Soluta vel corporis
+                ducimus error quisquam excepturi reprehenderit quasi.
+              </p>
+              <button id="eventsButton" class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-person"></i>
+              <h3 class="card-title">Vendedores</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reprehenderit maxime cupiditate optio
+                necessitatibus dolorem, corporis perspiciatis, velit dolores placeat delectus? Soluta vel corporis
+                ducimus error quisquam excepturi reprehenderit quasi.
+              </p>
+              <button class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="portfolio section-padding"> <!-- Productos -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center text-white">
+            <h2>Productos</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Ipsam a eos asperiores </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-dark pb-2">
+            <div class="card-body text-white">
+              <div class="img-area mb-4">
+                <img src="img/project-1.jpg" class="img-fluid" style="width: 600px; height: 300px;"> <!--Agregue style para forzar tamaño-->
+              </div>
+              <h3>Foto 1</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, maiores!
+              </p>
+              <button class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-dark pb-2">
+            <div class="card-body text-white">
+              <div class="img-area mb-4">
+                <img src="img/project-2.jpg" class="img-fluid" style="width: 600px; height: 300px;">
+              </div>
+              <h3>Foto 2</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, maiores!
+              </p>
+              <button class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-dark pb-2">
+            <div class="card-body text-white">
+              <div class="img-area mb-4">
+                <img src="img/project-3.jpg" class="img-fluid" style="width: 600px; height: 300px;">
+              </div>
+              <h3>Foto 3</h3>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, maiores!
+              </p>
+              <button class="btn bg-primary text-white">More info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="team section-padding"> <!-- Vendedores -->
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center text-white">
+            <h2>Vendedores Destacados</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit repellat, porro modi quod unde corporis!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-center bg-dark">
+            <div class="card-body text-white">
+              <img src="img/team-1.jpg" class="img-fluid rounded-circle" style="width: 250px; height: 250px;"> <!--Agregue el style para forzar el tamaño de imgs-->
+              <h3 class="card-title py-2">Vendedor 1</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet fugit inventore, recusandae optio at
+                nulla quas laudantium aut. Esse, placeat.
+              </p>
+              <p class="socials">
+                <i class="bi bi-facebook text-white mx-1"></i>
+                <i class="bi bi-instagram text-white mx-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-center bg-dark">
+            <div class="card-body text-white">
+              <img src="img/team-2.jpg" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+              <h3 class="card-title py-2">Vendedor 2</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet fugit inventore, recusandae optio at
+                nulla quas laudantium aut. Esse, placeat.
+              </p>
+              <p class="socials">
+                <i class="bi bi-facebook text-white mx-1"></i>
+                <i class="bi bi-instagram text-white mx-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-center bg-dark">
+            <div class="card-body text-white">
+              <img src="img/team-3.jpg" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+              <h3 class="card-title py-2">Vendedor 3</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet fugit inventore, recusandae optio at
+                nulla quas laudantium aut. Esse, placeat.
+              </p>
+              <p class="socials">
+                <i class="bi bi-facebook text-white mx-1"></i>
+                <i class="bi bi-instagram text-white mx-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-center bg-dark">
+            <div class="card-body text-white">
+              <img src="img/team-4.jpg" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+              <h3 class="card-title py-2">Vendedor 4</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet fugit inventore, recusandae optio at
+                nulla quas laudantium aut. Esse, placeat.
+              </p>
+              <p class="socials">
+                <i class="bi bi-facebook text-white mx-1"></i>
+                <i class="bi bi-instagram text-white mx-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+<!-- Esta parte no la veo tan necesaria, puede servir a lo mejor ya una vez se inicie sesión, que aparezca -->
+  <section class="contact section-padding">
+
+    <div class="container mt-5 mb-5">
+
+      <div class="col-md-12">
+        <div class="section-header text-center text-white">
+          <h2>Contacto</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis magnam unde culpa, dolorum animi rem.
+          </p>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col-md-12 p-0 pt-4 pb-4">
+          <form action="#" class="bg-dark p-4 m-auto">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Correo">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <textarea class="form-control" placeholder="Mensaje" rows="3"></textarea>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block mt-3">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer class="bg-dark p-2 text-center">
+    <div class="container">
+      <p class="text-white">Footer</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <!-- Para que funcione el boton de eventos-->
+    <script>    
+    document.getElementById('eventsButton').addEventListener('click', function() {
+      window.location.href = 'eventos.html';
+    });</script>
+
+>>>>>>> main
 </body>
+
 </html>
