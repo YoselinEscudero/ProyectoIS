@@ -1,79 +1,8 @@
-body {
-  background: beige;
-  
-}
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box; /*Hack para box-model*/
-  scroll-snap-type: y mandatory; /*Efecto de scroll en el eje y*/
-  overflow-x: hidden; /*Quita el scroll horizontal*/
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/*Encabezado*/
-
-.header {
-  position: fixed;
-  width: 100%;
-  transition: 0.7s;
-  z-index: 10;
-  height: 10rem;
+.centrar-contenido {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  justify-content: space-around;
-  background-color: #2d3035;
-}
-
-header.abajo {
-  background: #fff;
-  padding: 15px 20px;
-}
-
-.container {
-  position: relative;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  justify-content: space-around;
-  background-color: aquamarine;
-  width: 100%;
-}
-
-.icono {
-  width: 9rem;
-  border-radius: 5rem;
-}
-
-.text-input {
-  display: flex;
-  align-items: center;
-}
-
-.buscador {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 2rem;
-  border-style: dashed;
-  width: 30rem;
-  margin: 1rem;
-  padding: 1rem;
-  height: 3.5rem;
-  outline: none;
-}
-
-.iconoBuscar {
-  font-size: 3rem;
-  color: white;
-}
-
-header.abajo .iconoBuscar  {
-  color: black;
+  height: 100vh;
 }
 
 .producto {
@@ -82,27 +11,17 @@ header.abajo .iconoBuscar  {
   align-items: center;
 }
 
-.addProduct {
-  text-decoration: auto;
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 1.1rem;
-  border: 0;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  background-color: #e8a726;
-  transition: 0.5s;
+/* Estilo personalizado para el botón Agregar Producto */
+.producto button.addProduct {
+  background-color: rgb(74, 207, 236); /* Cambia el color de fondo a azul */
+  border-radius: 20px; /* Establece los bordes redondeados */
+  color: white; /* Cambia el color del texto a blanco */
+  font-weight: bold; /* Establece el grosor del texto en negrita */
+  padding: 10px 20px; /* Ajusta el espacio interno del botón a tu gusto */
 }
 
-addProduct:hover {
-  letter-spacing: 0.25em;
-  box-shadow: 0 0 3.5rem yellow;
-}
 
-/*MODAL*/
-
+/* Modal */
 .titulo-modal {
   font-size: 2rem;
 }
@@ -123,10 +42,12 @@ addProduct:hover {
 }
 
 .pie-modal {
-  margin-bottom: 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Cambiamos flex-end a center para centrar horizontalmente */
+  align-items: center; /* Agregamos para centrar verticalmente */
+  margin-bottom: 2rem;
 }
+
 
 .btn-cerrar-dialogo {
   background-color: #cf1500;
