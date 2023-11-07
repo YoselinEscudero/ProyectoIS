@@ -169,7 +169,8 @@ body {
 }
 
 .leftbox .content:hover{
-  background: #0275d8; /* Color primario bootstrap */
+  background: #ede574; 
+  color: black;
 }
 
 .leftbox .content h1 {
