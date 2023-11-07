@@ -1,3 +1,15 @@
+html {
+  transform-origin: bottom;
+  font-size: 62.5%;
+  box-sizing: border-box; /*Hack para box-model*/
+  scroll-snap-type: y mandatory; /*Efecto de scroll en el eje y*/
+  overflow-x: hidden; /*Quita el scroll horizontal*/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 .centrar-contenido {
   display: flex;
   justify-content: center;
@@ -5,19 +17,34 @@
   height: 100vh;
 }
 
+.p-titulo{
+  color: black;
+}
 .producto {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 50px;
+  padding-top: 3px;
+}
+
+/* .productos {
+  transform: scale(0.5);
+  transform-origin: bottom;
+} */
+
+.addProduct{
+  width: auto;
+  font-size: 10px;
 }
 
 /*botón Agregar Producto */
 .producto button.addProduct {
   background-color: #007bff; /* Color azul */
   border-radius: 20px;
-  color: white; /* Texto blanco */
+  color: rgb(0, 0, 0); /* Texto blanco */
   font-weight: bold;
+  font-size: 12px;
   padding: 10px 20px;
   border: none; /* Eliminamos el borde */
   box-shadow: 0 0 10px 5px #007bff; /* Sombra exterior azul */
@@ -156,6 +183,13 @@
   height: 60rem;
   position: relative;
   margin-bottom: 5rem;
+  margin: 5px; /* Reducir el margen */
+  padding: 5px; /* Reducir el espacio interno */
+
+  /* transform: scale(0.5); */
+  /* transform-origin: top; */
+  /* transform-origin: top ; */
+  /* transform-origin: bottom; */
 }
 
 .dulces {
@@ -174,9 +208,9 @@
 
 .carousel-productos {
   position: absolute;
-  right: -6rem;
+  /* right: -6rem; */
   width: 100%;
-  margin: 0px 0px;
+  /* margin: 0px 0px; */
 }
 
 @media (min-width: 768px) {
@@ -195,6 +229,7 @@
   margin: 0px auto;
   max-width: 90vw;
   overflow: hidden;
+  /* transform: scale(0.5); */
 }
 
 .carrusel-track {
@@ -203,10 +238,10 @@
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   transition: .3s ease-in-out;
   background-color: white;
   border-radius: 4%;
+  flex-direction: row-reverse;
 }
 
 /*
@@ -259,6 +294,11 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  /* transform-origin: top; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Controla la alineación vertical */
+  justify-content: flex-start; /* Controla la alineación horizontal */
 }
 
 .card {
