@@ -3,7 +3,8 @@
 }
 
 body {
-  background: #161815;
+  background: beige;
+  
 }
 
 .section-padding {
@@ -52,7 +53,7 @@ body {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: black;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;
@@ -117,10 +118,32 @@ body {
   }
 }
 
+#miElemento {
+  background-color: #ede574; 
+ /* padding-top: px;*/
+}
+
+.custom-color {
+  color: black; 
+  font-family: 'Poppins', sans-serif;
+
+ 
+}
+
+.small-logo {
+  width: 100px; /* Cambia el valor según el tamaño deseado */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.custom-text-color {
+  color: #012677; /* Cambia esto al color que desees en formato hexadecimal (#RRGGBB) */
+}
+
+
  /* ---------------- Pagina Eventos ----------------- */
 
 .eventspage {
-  padding-top: 70px;
+  padding-top: 150px;
   font-size: 25px;
   /* color: white; */
 
@@ -146,7 +169,8 @@ body {
 }
 
 .leftbox .content:hover{
-  background: #0275d8; /* Color primario bootstrap */
+  background: #ede574; 
+  color: black;
 }
 
 .leftbox .content h1 {
@@ -309,5 +333,6 @@ body {
   }
   section .events ul li .details a {
     padding: 5px 10px;
+
   }
 }
