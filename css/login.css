@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #faf9c2;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative; /* Agrega una posición relativa al contenedor */
+}
+
+.header-text {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto al texto dentro de la div */
+}
+
+.header-text p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 44%;
+  border-left: 2px solid yellow; /* Ajusta el grosor y el color de la línea amarilla */
+  height: 100px;
+}
+
+.logo {
+  max-width: 150px;
+  /* height: auto; */
+  /* margin: 20px; */
+  margin-left: 30px; /* Agrega este margen izquierdo para mover la imagen hacia la derecha */
+}
+
+.header-text {
+  font-size: 14px;
+  margin: 20px;
+}
+
+.login-box h1 {
+  top: 27px;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: 500; /* Agrega esta línea para establecer el texto en negritas */
+}
+
+.textbox {
+  position: relative;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.login-box h1 {
+  font-family: 'Roboto', sans-serif;
+  top: 30px;
+  font-size: 24px;
+  margin: 0 0 20px; /* Añade espacio en la parte inferior para separar el título de los campos de entrada */
+}
+
+.login-box {
+  padding: 24px; /* Agrega espacio horizontal alrededor del área de entrada */
+}
+
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: rgb(254, 245, 67); /* Cambia el color de fondo a azul */
+  color: #000000; /* Cambia el color del texto a negro */
+}
+
+.textbox i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+}
+
+/* .icon-login i {
+  position: absolute;
+  left: 260px;
+  top: 338px;
+  transform: translateY(-50%);
+  color: #000000;
+} */
+
+.login-box input[type="submit"] {
+  width: 100%;
+  background: blue; /* Cambia el color de fondo a azul */
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px; /* Agrega bordes redondeados */
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+h1 a {
+  font-size: 14px; /* Cambia el tamaño de letra según tus preferencias */
+  text-decoration: none; /* Elimina la decoración de subrayado del enlace */
+  color: #000000; /* Cambia el color del enlace según tus preferencias */
+}
+
+h1 a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el ratón sobre él */
+}
+
+
