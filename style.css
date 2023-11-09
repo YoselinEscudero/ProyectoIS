@@ -169,7 +169,8 @@ body {
 }
 
 .leftbox .content:hover{
-  background: #0275d8; /* Color primario bootstrap */
+  background: #ede574;
+  color: #000;
 }
 
 .leftbox .content h1 {
@@ -221,7 +222,7 @@ body {
 }
 
 .events ul li:hover .time {
-  background: #0275d8;
+  background: #2f9eff;
 }
 
 .events ul li .time h2 {
