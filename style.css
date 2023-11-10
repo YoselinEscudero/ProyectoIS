@@ -148,7 +148,7 @@ body {
  /* ---------------- Pagina Eventos ----------------- */
 
 .eventspage {
-  padding-top: 150px;
+  padding-top: 0px;
   font-size: 25px;
   /* color: white; */
 
@@ -156,15 +156,15 @@ body {
   height: 100vh;
   background-image: url('img/bg.jpg'); 
   background-size: cover;
-  /* padding-top: 295px; */
 }
 
 .leftbox {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
   float: left;
   padding: 50px;
   box-sizing: border-box;
+  margin-top: 150px;
 }
 
 .leftbox .content {
