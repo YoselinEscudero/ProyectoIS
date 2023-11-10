@@ -175,13 +175,8 @@ body {
 }
 
 .leftbox .content:hover{
-<<<<<<< HEAD
   background: #ede574;
   color: #000;
-=======
-  background: #ede574; 
-  color: black;
->>>>>>> d510d1b5e1af862aebe89d9cf0aeebb905fd4e8f
 }
 
 .leftbox .content h1 {
