@@ -1,0 +1,319 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; /*Hack para box-model*/
+  scroll-snap-type: y mandatory; /*Efecto de scroll en el eje y*/
+  overflow-x: hidden; /*Quita el scroll horizontal*/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Encabezado*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  transition: 0.7s;
+  z-index: 10;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+  background-color: #2d3035;
+}
+
+header.abajo {
+  background: #fff;
+  padding: 15px 20px;
+}
+
+.container {
+  position: relative;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+  background-color: aquamarine;
+  width: 100%;
+}
+
+.icono {
+  width: 9rem;
+  border-radius: 5rem;
+}
+
+.text-input {
+  display: flex;
+  align-items: center;
+}
+
+.buscador {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  border-style: dashed;
+  width: 30rem;
+  margin: 1rem;
+  padding: 1rem;
+  height: 3.5rem;
+  outline: none;
+}
+
+.iconoBuscar {
+  font-size: 3rem;
+  color: white;
+}
+
+header.abajo .iconoBuscar  {
+  color: black;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addProduct {
+  text-decoration: auto;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 1.1rem;
+  border: 0;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: #e8a726;
+  transition: 0.5s;
+}
+
+addProduct:hover {
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 3.5rem yellow;
+}
+
+/*MODAL*/
+
+.titulo-modal {
+  font-size: 2rem;
+}
+
+.etiqueta-label {
+  font-size: 1.5rem;
+}
+
+.input-formulario {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #f9fadc;
+  outline: none;
+  border: none;
+}
+
+.pie-modal {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-cerrar-dialogo {
+  background-color: #cf1500;
+  color: white;
+  outline: none;
+  border: 0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.btn-agregar-producto {
+  background-color: #258a60;
+  color: white;
+  outline: none;
+  border: 0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  margin-left: 0;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*Seccion principal*/
+
+.main {
+  padding-top: 7rem;
+  background-color: #2d3035;
+}
+
+.carrusel {
+  position: relative;
+  width: 210px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+
+.carrusel-bs {
+  background-color: #2d3035;
+  height: 55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carusel-img {
+  height: 42rem;
+}
+
+.recuadro {
+  box-shadow: gainsboro 0px 5px 15px 0px;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  height: 43.5rem;
+  background-color: white;
+  width: 45vw;
+  margin-right: 3rem;
+}
+
+.eslogan-img {
+  width: 40vw;
+  height: 35rem;
+  margin-left: 5rem;
+}
+
+/*
+.carr-imagenes {
+  width: 80vw;
+} */
+
+/*SECCION DE PRODUCTOS*/
+
+.tarjetas {
+  /*
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54); */
+  /*background-color: white;*/
+  height: 60rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.dulces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+  align-items: center;
+}
+
+.product-content {
+  margin: 1rem;
+}
+
+/*Estilo carrusel de productos*/
+
+.carousel-productos {
+  position: absolute;
+  right: -6rem;
+  width: 100%;
+  margin: 0px 0px;
+}
+
+@media (min-width: 768px) {
+  .carousel-productos {
+      margin: 0px 60px;
+  }
+}
+
+.carrusel-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 57rem;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.carrusel-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+/*
+.carrusel-content {
+  position: relative;
+  width: 21rem;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .carrusel-content {
+      width: 275px;
+  }
+} */
+
+.carrusel-arrow {
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 40px;
+  height: 48px;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.carrusel-arrow:focus {
+  outline: 0;
+}
+
+.carrusel-arrow svg {
+  width: 12px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel-prev {
+  left: 0px;
+}
+
+.carrusel-next {
+  right: 0px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(25% - 2rem); /* El ancho de cada tarjeta es 25% menos los margenes */
+  margin: 1rem;
+}
