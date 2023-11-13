@@ -40,15 +40,21 @@ html {
 
 /*botón Agregar Producto */
 .producto button.addProduct {
-  background-color: #007bff; /* Color azul */
+  background-color: #11766d;
   border-radius: 20px;
-  color: rgb(0, 0, 0); /* Texto blanco */
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 12px;
   padding: 10px 20px;
-  border: none; /* Eliminamos el borde */
-  box-shadow: 0 0 10px 5px #007bff; /* Sombra exterior azul */
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
 }
+
+.producto button.addProduct:hover {
+  background-color: #a3c68c; /* Cambio de color al pasar el ratón por encima */
+}
+
 
 @keyframes neonBlink {
   0% {
@@ -62,19 +68,21 @@ html {
   }
 }
 
-.producto button.addProduct {
-  animation: neonBlink 1s linear infinite; /* Aplicamos la animación de parpadeo */
-}
+/*.producto button.addProduct {
+  animation: neonBlink 1s linear infinite; 
+}*/
 
 
 
 /* Modal */
 .titulo-modal {
   font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .etiqueta-label {
   font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .input-formulario {
@@ -86,6 +94,7 @@ html {
   background-color: #f9fadc;
   outline: none;
   border: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 .pie-modal {
@@ -93,6 +102,7 @@ html {
   justify-content: center; /* Cambiamos flex-end a center para centrar horizontalmente */
   align-items: center; /* Agregamos para centrar verticalmente */
   margin-bottom: 2rem;
+
 }
 
 
@@ -106,6 +116,7 @@ html {
   padding: 0.8rem;
   font-size: 1.5rem;
   margin: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-agregar-producto {
   background-color: #258a60;
@@ -120,6 +131,9 @@ html {
   margin-right: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregué una sombra suave para resaltar el banner */
+  transition: background-color 0.3s ease; 
 }
 
 /*Seccion principal*/
@@ -131,7 +145,7 @@ html {
 
 .carrusel {
   position: relative;
-  width: 210px;
+  width: 100px;
   padding: 0 18px;
   float: left;
   box-sizing: border-box;
@@ -304,4 +318,51 @@ html {
 .card {
   width: calc(25% - 2rem); /* El ancho de cada tarjeta es 25% menos los margenes */
   margin: 1rem;
+}
+.modal-body {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-footer{
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.modal-title{
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+.letra{
+ 
+  font-family: 'Poppins', sans-serif;
+
+}
+.texto-arriba{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+
+}
+
+.p-titulo {
+  font-family: 'Poppins', sans-serif;
+  background-color: #b6d8c0;
+  text-align: center;
+  padding: 5px; /* Aumenté el espaco de relleno para más impacto visual */
+  color: #281f20;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 0 center; /* Añadí un margen en la parte superior e inferior para separación */
+  border-radius: 10px; /* Redondeo las esquinas del banner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregué una sombra suave para resaltar el banner */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.p-titulo:hover {
+  background-color: #8cbf9f; /* Cambio de color de fondo al pasar el ratón por encima */
 }
