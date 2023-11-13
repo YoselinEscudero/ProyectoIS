@@ -240,8 +240,8 @@ html {
   width: fit-content;
   height: 57rem;
   padding: 10px 0px;
-  margin: 0px auto;
-  max-width: 90vw;
+ /* margin: 0px auto;*/
+   max-width: 90vw;
   overflow: hidden;
   /* transform: scale(0.5); */
 }
