@@ -1,11 +1,12 @@
-body {
-  background-color: rgb(254, 245, 67);
+.box-saludo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
+  margin-top: 250px;
+}
+
+body {
+  background-color: beige;
 }
 
 .saludo {

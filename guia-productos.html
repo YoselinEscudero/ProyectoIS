@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.ico"></link>
+    <link href="style.css" rel="stylesheet">
+    <link href="./css/principal.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Productos</title>
+  </head>
+<body>
+  <script type="module" src="./js/connection.js"></script>
+  <script type="module" src="./js/index.js"></script>
+
+  <header class="header">
+      
+       <img src="./img/LogoNS.png" 
+            class="icono" 
+            onclick="location.reload()" 
+            style="cursor: pointer;"
+      >
+          <div class="text-input">
+              <input type="text" name="" id="buscador" class="buscador" placeholder="Buscar productos">
+              <i class="fa-solid fa-magnifying-glass fa-shake iconoBuscar"></i>
+          </div>
+          <div class="producto">
+              <i class="fa-solid fa-cart-plus fa-bounce iconoBuscar"></i>
+              
+              <button type="button" class="addProduct" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar Producto</button>
+          </div> 
+      
+      
+      <h3 class="text-center mb-5">"Encuentra lo que buscas al mejor precio"</h3>
+      
+  </header>
+
+    
+    <main class="main">
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title titulo-modal" id="staticBackdropLabel">Vender producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="formulario" class="formulario">
+                            <fieldset>
+                                <label for="categ" class="etiqueta-label">Categoría:</label>
+                                    <select name="categ" id="categ" class="input-formulario" style="width: 100%" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="comida">Comida</option>
+                                        <option value="bebidas">Bebidas</option>
+                                        <option value="dulces">Dulces</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                <label for="contacto" class="etiqueta-label">URL de contacto (Facebook):</label>
+                                <input
+                                    type="url"
+                                    name="contacto"
+                                    id="contacto"
+                                    class="input-formulario"
+                                    placeholder="Ingrese la URL de contacto"
+                                    style="width: 100%"
+                                    pattern="https?://.+"
+                                    required
+                                >
+                                <label for="imgUrl" class="etiqueta-label">URL de la imagen:</label>
+                                <input
+                                    type="url"
+                                    name="imgUrl"
+                                    id="imgUrl"
+                                    class="input-formulario"
+                                    placeholder="Ingrese la URL de la imagen"
+                                    style="width: 100%"
+                                    pattern="https?://.+"
+                                    required
+                                >
+                                <label for="precio" class="etiqueta-label">Precio ($MXN):</label>
+                                <input
+                                    type="text"
+                                    name="precio"
+                                    id="precio"
+                                    class="input-formulario"
+                                    placeholder="Ingrese el precio"
+                                    style="width: 100%"
+                                    required
+                                >
+                                <label for="productName" class="etiqueta-label">Nombre del producto:</label>
+                                <input
+                                    type="text"
+                                    name="productName"
+                                    id="productName"
+                                    class="input-formulario"
+                                    placeholder="Ingrese el nombre del producto"
+                                    style="width: 100%"
+                                    required
+                                >
+                                <label for="dias" class="etiqueta-label">Días de la venta:</label>
+                                <input
+                                    type="text"
+                                    name="dias"
+                                    id="dias"
+                                    class="input-formulario"
+                                    placeholder="Ingrese los días de la venta"
+                                    style="width: 100%"
+                                    required
+                                >
+                                <label for="horas" class="etiqueta-label">Horario de la venta:</label>
+                                <input
+                                    type="text"
+                                    name="horas"
+                                    id="horas"
+                                    class="input-formulario"
+                                    placeholder="Ingrese el horario de venta"
+                                    style="width: 100%"
+                                    required
+                                >
+                                <label for="vendorName" class="etiqueta-label">Nombre del vendedor:</label>
+                                <input
+                                    type="text"
+                                    name="vendorName"
+                                    id="vendorName"
+                                    class="input-formulario"
+                                    placeholder="Ingrese el nombre del vendedor"
+                                    style="width: 100%" 
+                                    required
+                                >
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="pie-modal">
+                        <button type="button" class="btn-cerrar-dialogo" id="btnClose" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn-agregar-producto btnAdd" id="btnAdd" data-bs-dismiss="modal" disabled="true">Agregar</button>
+                    </div>
+            </div>
+            </div>
+        </div>
+
+        <!--CARRUSEL-->
+        <section class="carrusel-bs">
+            <img src="/images/eslogan.jpg" class="eslogan-img" alt="">
+            <div class="recuadro">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/images-principal/carusel_1.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5 style="font-size: 2rem;">Collares y Pulseras</h5>
+                        <p style="font-size: 1.5rem;">Contacto del Vendedor: <a href="https://www.facebook.com/jocelyn.ariza.1" style="font-size: 1.5rem;">https://www.facebook.com/jocelyn.ariza.1</a></p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/images-principal/carrusel_2.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5 style="font-size: 2rem;">Combo Baguettorta</h5>
+                        <p style="font-size: 1.5rem;">Contacto del Vendedor: <a href="https://www.facebook.com/isai.hernandez.1213" style="font-size: 1.5rem;">https://www.facebook.com/isai.hernandez.1213</a></p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/images-principal/carrusel_3.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/images-principal/carrusel_4.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5 style="font-size: 2rem;">Carlota de limón</h5>
+                        <p style="font-size: 1.5rem;">Contacto del Vendedor: <a href="https://www.facebook.com/Slovid.Pablo" style="font-size: 1.5rem;">https://www.facebook.com/Slovid.Pablo</a></p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/images-principal/carrusel_5.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5 style="font-size: 2rem;">Pays de Yogurt</h5>
+                        <p style="font-size: 1.5rem;">Contacto del Vendedor: <a href="https://www.facebook.com/DianAvyeLopez.230318" style="font-size: 1.5rem;">https://www.facebook.com/DianAvyeLopez.230318</a></p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/images-principal/carrusel_6.jpg" class="d-block w-100 carusel-img" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5 style="font-size: 2rem;">Pan dulce</h5>
+                        <p style="font-size: 1.5rem;">Contacto del Vendedor: <a href="https://www.facebook.com/arantxa.gonzalez.7" style="font-size: 1.5rem;">https://www.facebook.com/arantxa.gonzalez.7</a></p> -->
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+            <!--CONTENIDO-->
+        <section class="productos" style="background-image: linear-gradient(to bottom, #2e3236 0%, #fff 100%);">
+            <div class="texto-titulo text-center" 
+                style="
+                    font-family: 'Indie Flower', cursive;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 3rem;
+                    ">
+                <p>Dale un vistazo a los productos</p>
+            </div>
+            
+         <div id="productosAll" class="row">
+            <!--SECCION PARA DULCES-->
+                <div class="tarjetas">
+                    <div class="carousel-productos">
+                        <div class="texto-titulo" 
+                        style="
+                            margin-left: 5rem;
+                            font-family: 'Indie Flower', cursive;
+                            color: white;
+                            font-weight: 700;
+                            font-size: 3rem;
+                            ">
+                            <p>Dulces</p>
+                        </div>
+                        <div class="carrusel-list" id="carrusel-list">
+                            <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                    </path>
+                                </svg>
+                            </button>
+            
+                            <div class="carrusel-track track" id="contenido-productos">
+                                <div class="carrusel" id="carrusel-contenido"></div>
+                            </div>
+            
+                            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SECCION PARA COMIDA-->
+                <div class="tarjetas">
+                    <div class="carousel-productos">
+                        <div class="texto-titulo" 
+                        style="
+                            margin-left: 5rem;
+                            font-family: 'Indie Flower', cursive;
+                            color: white;
+                            font-weight: 700;
+                            font-size: 3rem;
+                            ">
+                            <p>Comida</p>
+                        </div>
+                        <div class="carrusel-list" id="carrusel-list">
+                            <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                    </path>
+                                </svg>
+                            </button>
+            
+                            <div class="carrusel-track track" id="contenido-comida">
+                                <div class="carrusel"></div>
+                            </div>
+            
+                            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SECCION PARA BEBIDAS-->
+                <div class="tarjetas">
+                    <div class="carousel-productos">
+                        <div class="texto-titulo" 
+                        style="
+                            margin-left: 5rem;
+                            font-family: 'Indie Flower', cursive;
+                            color: white;
+                            font-weight: 700;
+                            font-size: 3rem;
+                            ">
+                            <p>Bebidas</p>
+                        </div>
+                        <div class="carrusel-list" id="carrusel-list">
+                            <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                    </path>
+                                </svg>
+                            </button>
+            
+                            <div class="carrusel-track track" id="contenido-bebidas">
+                                <div class="carrusel"></div>
+                            </div>
+            
+                            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--SECCION PARA OTROS-->
+                <div class="tarjetas">
+                    <div class="carousel-productos">
+                        <div class="texto-titulo" 
+                        style="
+                            margin-left: 5rem;
+                            font-family: 'Indie Flower', cursive;
+                            color: black;
+                            font-weight: 700;
+                            font-size: 3rem;
+                            ">
+                            <p>Otros</p>
+                        </div>
+                        <div class="carrusel-list" id="carrusel-list">
+                            <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                    </path>
+                                </svg>
+                            </button>
+            
+                            <div class="carrusel-track track" id="contenido-otros">
+                                <div class="carrusel"></div>
+                            </div>
+            
+                            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                                onclick="app.processingButton(event)">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <template id="products-top">
+                <div class="card" style="width: 25rem; margin: 2rem; border-radius: 1rem;">
+                    <div class="card-header" style="overflow: hidden;">
+                        <img src="" class="card-img-top" alt="" style="border-radius: 1rem; max-height: 15rem; object-fit: cover">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="nombreProducto text-center" style="font-size: 2rem;"></h5>
+                      <p class="precioProducto text-center" style="font-size: 2rem;"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div style="margin-left: 1rem;">
+                            <!-- <p style="font-weight: 700; font-size: 1.5rem;">Categoria: <span class="categoriaProducto" style="font-weight: 400;"></span></p> -->
+                            <p style="font-weight: 700; font-size: 1.5rem;">Dias de Venta: <span class="diasVenta" style="font-weight: 400;"></span></p>
+                            <p style="font-weight: 700; font-size: 1.5rem;">Horas de Venta: <span class="horasVenta" style="font-weight: 400;"></span></p>
+                            <p style="font-weight: 700; font-size: 1.5rem;">Nombre del Vendedor: <span class="nombreVendedor" style="font-weight: 400;"></span></p>
+                        </div>
+                    </ul>
+                    <div class="card-body" style="display: flex; align-items: center; justify-content: space-evenly;">
+                      <a target="_blank" href="" class="contactoVendedor btn btn-warning" style="font-size: 2rem; display: block; font-weight: 500; border-radius: 10px; width: 18rem;">
+                        Comprar
+                      </a>
+                      <i class="fa-solid fa-trash text-danger" id="btnModal-delete" style="font-size: 24px; float: right; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#modal-delete"></i>
+                    </div>  
+                </div>
+            </template>
+        </section>
+    </main>
+  
+  <!-- Modal Delete -->
+  <div class="modal fade" id="modal-delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel" style="font-weight: 700; font-size: 1.5rem;"> Eliminar Producto </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="font-weight: 700; font-size: 1.5rem;">
+            ¿Seguro de que quieres eliminar el producto?, Si el producto no es tuyo, No lo elimines!!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnCancel" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger" id="btnDelete" data-bs-dismiss="modal">Borrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <!--
+    <footer class="footer">
+        <div class="container">
+            <p>Pagina diseñada por: </p>
+        </div>
+    </footer> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
