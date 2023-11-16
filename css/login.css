@@ -37,7 +37,7 @@ body {
   top: 20px;
   bottom: 0;
   left: 44%;
-  border-left: 2px solid yellow; /* Ajusta el grosor y el color de la línea amarilla */
+  border-left: 2px solid #F9D24A; /* Ajusta el grosor y el color de la línea amarilla */
   height: 100px;
 }
 
@@ -86,8 +86,8 @@ body {
   border: none;
   border-radius: 25px;
   outline: none;
-  background-color: rgb(254, 245, 67); /* Cambia el color de fondo a azul */
-  color: #000000; /* Cambia el color del texto a negro */
+  background-color: #F9D24A; /* Cambia el color de fondo a azul */
+  color: #050404; /* Cambia el color del texto a negro */
 }
 
 .textbox i {
@@ -108,7 +108,7 @@ body {
 
 .login-box input[type="submit"] {
   width: 100%;
-  background: blue; /* Cambia el color de fondo a azul */
+  background: #004AAD; /* Cambia el color de fondo a azul */
   color: #fff;
   padding: 10px;
   font-size: 18px;
