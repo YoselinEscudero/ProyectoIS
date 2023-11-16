@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #faf9c2;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -10,6 +10,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-family: 'Poppins', sans-serif;
   transform: translate(-50%, -50%);
   background: #fff;
   text-align: center;
@@ -24,7 +25,7 @@ body {
 }
 
 .header-text {
-  font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto al texto dentro de la div */
+  font-family: 'Poppins', sans-serif;/* Aplica la fuente Roboto al texto dentro de la div */
 }
 
 .header-text p {
@@ -34,9 +35,9 @@ body {
 .header::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 30px;
   bottom: 0;
-  left: 44%;
+  left: 45%;
   border-left: 2px solid #F9D24A; /* Ajusta el grosor y el color de la línea amarilla */
   height: 100px;
 }
@@ -50,7 +51,7 @@ body {
 
 .header-text {
   font-size: 14px;
-  margin: 20px;
+  margin: 1px;
 }
 
 .login-box h1 {
@@ -68,7 +69,7 @@ body {
 }
 
 .login-box h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   top: 30px;
   font-size: 24px;
   margin: 0 0 20px; /* Añade espacio en la parte inferior para separar el título de los campos de entrada */
@@ -87,7 +88,7 @@ body {
   border-radius: 25px;
   outline: none;
   background-color: #F9D24A; /* Cambia el color de fondo a azul */
-  color: #050404; /* Cambia el color del texto a negro */
+  color: black; /* Cambia el color del texto a negro */
 }
 
 .textbox i {
@@ -129,10 +130,11 @@ h1 a:hover {
 }
 
 .frase {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  
 }
 
 
