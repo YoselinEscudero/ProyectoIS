@@ -21,19 +21,20 @@
     </div>
     <div class="login-box">
       <form>
+        <p class="frase">Escribir un correo de la UG</p>
         <div class="textbox">
-          <input type="text" placeholder="Correo electronico" name="username" id="inputCorreo" required>
-          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Correo Institucional" name="username" id="inputCorreo" required>
+          <i class="fa-solid fa-envelope"></i>
         </div>
-        <div class="textbox">
+        <!-- <div class="textbox">
           <input type="password" placeholder="Contraseña" name="password" required>
           <i class="fas fa-lock"></i>
-        </div>
+        </div> -->
         <div class="icon-login">
           <!-- <i class="fas fa-sign-in-alt"></i> -->
           <input type="submit" value="Iniciar sesión" id="btnVerificar">
         </div>
-        <h1><a href="#">¿Olvidó su nombre de usuario o contraseña?</a></h1>
+        <h1><a href="#">Bienvenido Abeja 🐝</a></h1>
       </form>    
     </div>  
   </div>
@@ -45,15 +46,12 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const usernameInput = document.querySelector("input[name='username']");
-    const passwordInput = document.querySelector("input[name='password']");
     const loginButton = document.getElementById("btnVerificar");
     const inputCorreo = document.getElementById("inputCorreo");
 
     function enableLoginButton() {
         if (
             usernameInput.value.trim() !== "" &&
-            passwordInput.value.trim() !== "" &&
-            inputCorreo.value.trim() !== "" &&
             isValidEmail(inputCorreo.value)
         ) {
             loginButton.disabled = false;
@@ -68,15 +66,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     usernameInput.addEventListener("input", enableLoginButton);
-    passwordInput.addEventListener("input", enableLoginButton);
-    inputCorreo.addEventListener("input", enableLoginButton);
+
+    inputCorreo.addEventListener("input", function () {
+        enableLoginButton();
+    });
+
+    inputCorreo.addEventListener("change", function () {
+        if (inputCorreo.value.trim() !== "" && !isValidEmail(inputCorreo.value)) {
+            alert("Tú no eres UG, vete!! 😡");
+        }
+    });
 
     document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Evitar que el formulario se envíe (puedes agregar tu lógica de redirección aquí)
+        event.preventDefault();
         if (loginButton.disabled === false) {
-            // Realiza la acción que desees, como redireccionar a otra página
             window.location.href = "index.html";
         }
     });
 });
 </script>
+

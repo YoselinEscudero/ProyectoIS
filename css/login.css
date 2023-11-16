@@ -92,7 +92,7 @@ body {
 
 .textbox i {
   position: absolute;
-  left: 10px;
+  left: 9px;
   top: 50%;
   transform: translateY(-50%);
   color: #000000;
@@ -126,6 +126,13 @@ h1 a {
 
 h1 a:hover {
   text-decoration: underline; /* Subraya el enlace al pasar el ratón sobre él */
+}
+
+.frase {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 
