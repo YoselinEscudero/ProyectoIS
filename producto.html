@@ -412,34 +412,34 @@
   <div id="footer_content">
 
     <div id="footer_contacts">
-      <h1>DICIS NEWSLINE</h1>
-      <p>EVENTOS, COMUNIDAD, VENTAS JUNTOS EN NUESTRA PLATAFORMA UNIVERSITARIA</p>
+      <h1 style="font-family: 'Poppins', sans-serif;">DICIS NEWSLINE</h1>
+      <p style="font-family: 'Poppins', sans-serif;">EVENTOS, COMUNIDAD, VENTAS JUNTOS EN NUESTRA PLATAFORMA UNIVERSITARIA</p>
 
       <div id="footer_socials">
 
         <a href="https://github.com/LuisUgarteC" class="footer-link" id="github1">
           <i class="fa-brands fa-github"></i>
-          <p>Daniel</p>
+          <p style="font-family: 'Poppins', sans-serif;">Daniel</p>
         </a>
 
         <a href="https://github.com/JoseJavierGJ" class="footer-link" id="github2">
           <i class="fa-brands fa-github"></i>
-          <p>Javier</p>
+          <p style="font-family: 'Poppins', sans-serif;">Javier</p>
         </a>
 
         <a href="https://github.com/YoselinEscudero" class="footer-link" id="github3">
           <i class="fa-brands fa-github"></i>
-          <p>Yoselin</p>
+          <p style="font-family: 'Poppins', sans-serif;">Yoselin</p>
         </a>
 
         <a href="https://github.com/IsaacFonseca212" class="footer-link" id="github4">
           <i class="fa-brands fa-github"></i>
-          <p>Isaac</p>
+          <p style="font-family: 'Poppins', sans-serif;">Isaac</p>
         </a>
 
         <a href="https://github.com/Adan2310" class="footer-link" id="github5">
           <i class="fa-brands fa-github"></i>
-          <p>Adán</p>
+          <p style="font-family: 'Poppins', sans-serif;">Adán</p>
         </a>
       </div>
     </div>
@@ -459,16 +459,10 @@
         <h3>Productos</h3>
       </li>
       <li>
-        <a href="#dulces" class="footer-link">Dulces</a>
+        <a href="#destacados" class="footer-link" style="font-family: 'Poppins', sans-serif;">Destacados</a>
       </li>
       <li>
-        <a href="#comida" class="footer-link">Comida</a>
-      </li>
-      <li>
-        <a href="#bebidas" class="footer-link">Bebidas</a>
-      </li>
-      <li>
-        <a href="#otros" class="footer-link">Otros</a>
+        <a href="producto.html" class="footer-link" style="font-family: 'Poppins', sans-serif;">Existentes</a>
       </li>
     </ul>
 
@@ -477,23 +471,33 @@
         <h3>Vendedores</h3>
       </li>
       <li>
-        <a href="index.html" class="footer-link">Principales</a>
+        <a href="#principales" class="footer-link">Principales</a>
       </li>
+      <!-- <li>
+        <a href="vendedores.html" class="footer-link">Disponibles</a>
+      </li> -->
     </ul>
 
   </div>
 
 
-  <div id="footer_copy">
+  <div id="footer_copy" style="font-family: 'Poppins', sans-serif;">
     &#169 <!-- Simbolo Copy -->
     2023 all rights reserved by DICIS NEWSLINE
   </div>
 </footer>
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+
+<!-- Para que funcione el boton de eventos-->
+<script>
+  document.getElementById('eventsButton').addEventListener('click', function () {
+    window.location.href = 'eventos.html';
+  });</script>
+
 </body>
 
 </html>
