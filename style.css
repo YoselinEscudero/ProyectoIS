@@ -72,6 +72,16 @@ body {
   height: 100vh;
 }
 
+.span-eve {
+  background: #262626;
+  transition: .5s;
+  color:#fff
+}
+
+.span-eve:hover{
+  background: #2f9eff;
+}
+
 .navbar-toggler{
   padding: 1px 5px;
   font-size: 18px;

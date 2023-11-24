@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500&family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="./css/productos.css">
 </head>
 
-<body>
+<body> 
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top"  id="miElemento" class="bg-primary">
 
@@ -84,6 +84,9 @@
 
     <div class="events" >
       <ul>
+        <div class="d-flex justify-content-center w-100 h-100">
+          <button type="button" class="addEvent span-eve w-50 h-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar Evento</button>  
+        </div>
         <li>
           <div class="time">
             <h2 class="text">20<br><span class="text">Noviembre</span></h2>
@@ -127,13 +130,103 @@
           </div>
           <div style="clear: both;"></div>
         </li>
-
-
-
       </ul>
     </div>
 
   </section>  
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title titulo-modal" id="staticBackdropLabel">Agregar Evento o Conferencia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form name="formulario" class="formulario">
+              <fieldset>
+                <label for="categ" class="etiqueta-label">Nombre del grupo organizado</label>
+                <select name="categ" id="categ" class="input-formulario" style="width: 100%" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="asme">ASME SOMIM UG</option>
+                  <option value="bee">BeeDevelopers</option>
+                  <option value="caadi">CAADI</option>
+                  <option value="oasis">OASIS SPIE</option>
+                  <option value="apolo">APOLO UG</option>
+                  <option value="ieee">IEEE</option>
+                  <option value="otros">Otros</option>
+                </select>
+                <label for="contacto" class="etiqueta-label">URL de la publicación (Facebook):</label>
+                <input 
+                  type="url" 
+                  name="contacto" 
+                  id="contacto" 
+                  class="input-formulario"
+                  placeholder="Ingrese la URL de la publicacion (Obligatorio)" 
+                  style="width: 100%" 
+                  pattern="https?://.+" 
+                  required
+                >
+                <label for="imgUrl" class="etiqueta-label">URL de la imagen:</label>
+                <input 
+                  type="url" 
+                  name="imgUrl" 
+                  id="imgUrl" 
+                  class="input-formulario"
+                  placeholder="Ingrese la URL de la imagen" 
+                  style="width: 100%" 
+                  pattern="https?://.+" 
+                  required
+                >
+                <label for="eventName" class="etiqueta-label">Nombre de la conferencia/evento</label>
+                <input 
+                  type="text" 
+                  name="eventName" 
+                  id="eventName" 
+                  class="input-formulario" 
+                  placeholder="Ingrese el nombre"
+                  style="width: 100%" 
+                  required
+                >
+                <label for="expName" class="etiqueta-label">Nombre del exponente (Opcional)</label>
+                <input 
+                  type="text" 
+                  name="expName" 
+                  id="expName" 
+                  class="input-formulario"
+                  placeholder="Ingrese el nombre del exponente (Solo conferencias)" 
+                  style="width: 100%" 
+                >git 
+                <label for="eventDay" class="etiqueta-label">Día y hora de la conferencia/evento</label>
+                <input 
+                  type="datetime-local" 
+                  name="eventDay" 
+                  id="eventDay" 
+                  class="input-formulario"
+                  placeholder="Seleccione el día del evento"
+                  style="width: 100%" 
+                  required
+                >
+              </fieldset>
+            </form>
+          </div>
+          <div class="pie-modal">
+            <button type="button" class="btn-cerrar-dialogo" id="btnClose" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn-agregar-producto btnAdd" id="btnAdd" data-bs-dismiss="modal"
+              disabled="true">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <style>
+    body{
+      background: #343a40!important;
+    }
+    </style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
