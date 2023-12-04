@@ -17,7 +17,8 @@
 </head>
 
 <body> 
-
+  <script type="module" src="./js/connection.js"></script>
+  <script type="module" src="./js/index.js"></script>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top"  id="miElemento" class="bg-primary">
 
     <div class="container">
@@ -59,13 +60,12 @@
 
     <div class="leftbox">
       <div class="content">
-        <h1 class="text">Eventos Disponibles</h1>
-         <p class="text">
+        <h1 class="text" style="font-size: 40px;">Eventos Disponibles</h1>
+         <p class="text" style="font-size: 20px;">
           A continuación, una lista de los eventos disponibles en la división de ingenierías Campus Irapuato-Salamanca
         </p>
       </div>
-
-      <div style="display: flex; justify-content: center; align-items: center;">
+      <div style="width: 70%; display: flex; justify-content: center; align-items: center;">
         <div class="calendar">
           <div class="left">
             <p id="date" class="text">01</p>
@@ -150,6 +150,7 @@
                 <select name="categ" id="categ" class="input-formulario" style="width: 100%" required>
                   <option value="">Seleccione una opción</option>
                   <option value="asme">ASME SOMIM UG</option>
+                  <option value="asme">AERO</option>
                   <option value="bee">BeeDevelopers</option>
                   <option value="caadi">CAADI</option>
                   <option value="oasis">OASIS SPIE</option>
@@ -197,7 +198,7 @@
                   class="input-formulario"
                   placeholder="Ingrese el nombre del exponente (Solo conferencias)" 
                   style="width: 100%" 
-                >git 
+                > 
                 <label for="eventDay" class="etiqueta-label">Día y hora de la conferencia/evento</label>
                 <input 
                   type="datetime-local" 
@@ -218,8 +219,72 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
 
+    <section class="eventos">
+      <div class="tarjetas">
+        <div class="carousel-eventos">
+          <div class="carrusel-list" id="carrusel-list">
+            <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+              onclick="app.processingButton(event)">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512">
+                <path fill="currentColor"
+                  d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                </path>
+              </svg>
+            </button>
+  
+            <div class="carrusel-track track" id="contenido-eventos">
+              <div class="carrusel" id="carrusel-contenido"></div>
+            </div>
+  
+            <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+              onclick="app.processingButton(event)">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512">
+                <path fill="currentColor"
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <template id="eventos-top">
+        <div class="card" style="width: 25rem; margin: 2rem; border-radius: 1rem;">
+          <div class="card-header" style="overflow: hidden;">
+            <img src="" class="card-img-top" alt="" style="border-radius: 1rem; max-height: 15rem; object-fit: cover">
+          </div>
+          <div class="card-body">
+            <h5 class="nombreEvento text-center" style="font-size: 2rem;"></h5>
+            <!-- <p class="precioProducto text-center" style="font-size: 2rem;"></p> -->
+          </div>
+          <ul class="list-group list-group-flush">
+            <div style="margin-left: 1rem;">
+              <!-- <p style="font-weight: 700; font-size: 1.5rem;">Categoria: <span class="categoriaProducto" style="font-weight: 400;"></span></p> -->
+              <p style="font-weight: 700; font-size: 1.5rem;" class="letra">Dia del evento <span class="diaEvento"
+                  style="font-weight: 400;"></span></p>
+              <!-- <p style="font-weight: 700; font-size: 1.5rem;" class="letra">Horas de Venta: <span class="horasVenta"
+                  style="font-weight: 400;"></span></p> -->
+              <p style="font-weight: 700; font-size: 1.5rem;" class="letra">Nombre del Grupo Organizado: <span class="nombreGrupo"
+                  style="font-weight: 400;"></span></p>
+            </div>
+          </ul>
+          <div class="card-body" style="display: flex; align-items: center; justify-content: space-evenly;">
+            <a target="_blank" href="" class="contactoEvento btn btn-warning"
+              style="font-size: 2rem; display: block; font-weight: 500; border-radius: 10px; width: 18rem;" class="letra">
+              Consultar información
+            </a>
+            <i class="fa-solid fa-trash text-danger" id="btnModal-delete"
+              style="font-size: 24px; float: right; cursor: pointer;" data-bs-toggle="modal"
+              data-bs-target="#modal-delete"></i>
+          </div>
+        </div>
+      </template>
+    </section>
 
 
   <style>

@@ -4,7 +4,6 @@ import { getProducts, saveProduct, deleteProduct } from './connection.js' // Imp
 const form = document.querySelector('.formulario') // Selects the form
 const btnAdd = document.querySelector('.btnAdd') // Selects the button to add products
 const btnClose = document.querySelector('#btnClose') // Selects the button to close the form
-
 // Modal to delete a product
 const btnDelete = document.querySelector('#btnDelete') // Selects the button to delete the product
 const btnCancel = document.querySelector('#btnCancel') // Selects the button to cancel
@@ -96,7 +95,7 @@ const creaCardsOtros = () => {
     products.forEach((item) => {
         if (item.category === 'otros') {
             //console.log(item)
-            cardTop.querySelector('img').setAttribute('src', item.image_url)
+            cardTop.querySelector('img').setAttribute('src', item.URL_i)
             cardTop.querySelector('.nombreProducto').textContent = item.product_name
             cardTop.querySelector('.precioProducto').textContent = '$ ' + item.price
             //cardTop.querySelector('.categoriaProducto').textContent = item.category
