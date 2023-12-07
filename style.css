@@ -72,6 +72,17 @@ body {
   height: 100vh;
 }
 
+.span-eve {
+  background: #262626;
+  transition: .5s;
+  color:#fff
+}
+
+.span-eve:hover{
+  background: #2f9eff;
+}
+
+
 .navbar-toggler{
   padding: 1px 5px;
   font-size: 18px;
@@ -130,8 +141,35 @@ body {
 .custom-color {
   color: black; 
   font-family: 'Poppins', sans-serif;
+}
 
- 
+.btnn{
+  padding: 4px 19px;
+  border: none;
+  font-size: 18px;
+  height: 40px;
+  width: 127px;
+  /* color: white; */
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+
+.btn-delete{
+  background-color: white;
+  color: #f44336;
+  border: 2px solid #f44336;
+}
+
+.btn-delete:hover{
+  background-color: #f44336;
+  color: white;
+}
+
+.btns-eve{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .btn-more {
@@ -163,7 +201,7 @@ body {
 
  /* ---------------- Pagina Eventos ----------------- */
 
-.eventspage {
+ .eventspage {
   padding-top: 0px;
   font-size: 25px;
   /* color: white; */
@@ -176,11 +214,14 @@ body {
 
 .leftbox {
   width: 50%;
-  /* height: 100%; */
-  float: left;
-  padding: 50px;
-  box-sizing: border-box;
-  margin-top: 150px;
+    /* height: 100%; */
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
 }
 
 .leftbox .content {
@@ -214,14 +255,18 @@ body {
   background: rgba(0, 0, 0, 0.5);
   float: right;
   box-sizing: border-box;
+  top: 120px;
+  padding: 10px;
+  overflow-y: scroll;
 }
 
+.grupo {
+  display: contents;
+}
 .events ul {
-  position: absolute;
-  top: 62%;
-  transform: translateY(-50%);
+  position: relative;
   box-sizing: border-box;
-  padding-top: 160px;
+  width: 98%;
 }
 
 .events ul li{
@@ -292,15 +337,15 @@ body {
 .events ul li .details a{
   display: inline-block;
   text-decoration: none;
-  padding: 0px 19px;
-  border: 2px solid rgb(38, 38, 38);
+  padding: 4px 19px;
+  border: 2px solid #0275d8;
   /* margin-top: -25px; */
-  font-size: 13px;
-  width: 100px;
-  padding-bottom: -50px;
+  font-size: 18px;
+  width: 127px;
   transition: all 0.5s ease 0s;
   display: flex;
-  height: 30px;
+  height: 42px;
+  margin-bottom: 10px;
 }
 
 .events ul li .details a:hover {
