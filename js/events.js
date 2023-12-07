@@ -54,7 +54,7 @@ const createCard = (item) => {
             </div>
             <div class="details">
                     <h3 class="text">${item.Nombre_conf} - ${item.Grupo}</h3>
-                    <p class="text">${item.Descripcion}</p>
+                    <p class="text" style="padding-bottom: 39px";>${item.Descripcion}</p>
                     <div class="btns-eve">
                         <div class=more_info>
                             <a href="${item.URL_p}" class="text">More info</a>

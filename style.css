@@ -260,6 +260,8 @@ body {
   overflow-y: scroll;
 }
 
+
+
 .grupo {
   display: contents;
 }
@@ -273,9 +275,8 @@ body {
   list-style: none;
   background: #fff;
   box-sizing: border-box;
-  height: 200px;
+  height: 300px;
   margin: 15px 0;
-  height: 205px;
 }
 
 .events ul li .time{
