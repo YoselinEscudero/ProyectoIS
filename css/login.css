@@ -1,8 +1,19 @@
+
 body {
   margin: 0;
   padding: 0;
-  background: #faf9c2;
   font-family: 'Poppins', sans-serif;
+  background: url("https://img.freepik.com/vector-premium/abejas-lindas-patrones-fisuras-tarro-miel-fondo-papel-tapiz-textil-o-diseno-superficie_90138-92.jpg") repeat;
+  animation: movimientoDiagonal 10s linear infinite;
+}
+ 
+@keyframes movimientoDiagonal {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .container {
