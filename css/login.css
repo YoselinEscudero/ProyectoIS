@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: url("https://img.freepik.com/vector-premium/abejas-lindas-patrones-fisuras-tarro-miel-fondo-papel-tapiz-textil-o-diseno-superficie_90138-92.jpg") repeat;
-  animation: movimientoDiagonal 10s linear infinite;
+  background: url("https://img.freepik.com/vector-gratis/patron-panal-miel_225004-641.jpg") repeat;
+  animation: movimientoDiagonal 30s linear infinite;
 }
  
 @keyframes movimientoDiagonal {
@@ -157,6 +157,7 @@ a.styled-button {
   color: #fff; /* Color del texto del botón */
   border-radius: 25px; /* Bordes redondeados */
   transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  font-size: 1.2rem;
 }
 
 /* Cambiar color de fondo al pasar el ratón sobre el botón */
