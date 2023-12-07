@@ -134,6 +134,22 @@ body {
  
 }
 
+.btn-more {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición para el cambio de color */
+}
+
+.btn-more:hover {
+  background-color: #0056b3; /* Cambio de color al pasar el cursor */
+}
+
 .small-logo {
   width: 100px; /* Cambia el valor según el tamaño deseado */
   height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
