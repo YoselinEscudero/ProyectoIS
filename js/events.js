@@ -57,10 +57,10 @@ const createCard = (item) => {
                     <p class="text" style="padding-bottom: 39px";>${item.Descripcion}</p>
                     <div class="btns-eve">
                         <div class=more_info>
-                            <a href="${item.URL_p}" class="text">More info</a>
+                            <a href="${item.URL_p}" class="text">Más Info</a>
                         </div>
                         <div class=btn_delete>
-                        <button class="btnn btn-delete" id="btnModal-delete" data-event-id="${item.id}">Delete</button>
+                        <button class="btnn btn-delete" id="btnModal-delete" data-event-id="${item.id}">Borrar</button>
                         </div>
                     </div>
             </div>
