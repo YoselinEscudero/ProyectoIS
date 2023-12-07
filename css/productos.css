@@ -33,14 +33,14 @@ html {
   transform-origin: bottom;
 } */
 
-.addProduct{
+.addProduct {
   width: auto;
   font-size: 10px;
 }
 
-/*botón Agregar Producto */
+/* botón Agregar Producto */
 .producto button.addProduct {
-  background-color: #11766d;
+  background-color: #0275d8;
   border-radius: 20px;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -49,11 +49,42 @@ html {
   border: none;
   font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+  position: relative;
+  overflow: hidden;
 }
 
 .producto button.addProduct:hover {
-  background-color: #a3c68c; /* Cambio de color al pasar el ratón por encima */
+  background-color: #02569f; /* Cambio de color al pasar el ratón por encima */
 }
+
+.producto button.addProduct::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  opacity: 0;
+  animation: neon-animation 1.5s infinite alternate;
+}
+
+@keyframes neon-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 
 
 @keyframes neonBlink {
@@ -351,7 +382,7 @@ html {
 
 .p-titulo {
   font-family: 'Poppins', sans-serif;
-  background-color: #b6d8c0;
+  background-color: #9cd0d0;
   text-align: center;
   padding: 5px; /* Aumenté el espaco de relleno para más impacto visual */
   color: #281f20;
@@ -363,6 +394,6 @@ html {
   transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
 }
 
-.p-titulo:hover {
-  background-color: #8cbf9f; /* Cambio de color de fondo al pasar el ratón por encima */
-}
+/* .p-titulo:hover {
+  background-color: #8cbf9f; 
+} */
